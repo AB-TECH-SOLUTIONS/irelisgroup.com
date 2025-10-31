@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inscription – Irelis</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .register-container {
+      display: flex;
+      gap: 40px;
+      margin: 30px 0;
+      flex-wrap: wrap;
+    }
+    .register-card {
+      flex: 1;
+      min-width: 300px;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(31,32,65,0.08);
+      text-align: center;
+    }
+    .register-card img {
+      width: 80px;
+      margin-bottom: 20px;
+      opacity: 0.9;
+    }
+    .register-card h2 {
+      color: var(--dark);
+      margin-bottom: 16px;
+    }
+    .register-card form input {
+      width: 100%;
+      padding: 11px;
+      margin: 8px 0;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+    .register-card form {
+      text-align: left;
+    }
+    .btn-secondary {
+      background: #f1f3f9;
+      color: var(--dark);
+      border: none;
+      padding: 11px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inscription – Irelis</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .register-container {
+      display: flex;
+      gap: 40px;
+      margin: 30px 0;
+      flex-wrap: wrap;
+    }
+    .register-card {
+      flex: 1;
+      min-width: 300px;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(31,32,65,0.08);
+      text-align: center;
+    }
+    .register-card img {
+      width: 80px;
+      margin-bottom: 20px;
+      opacity: 0.9;
+    }
+    .register-card h2 {
+      color: var(--dark);
+      margin-bottom: 16px;
+    }
+    .register-card form input {
+      width: 100%;
+      padding: 11px;
+      margin: 8px 0;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+    .register-card form {
+      text-align: left;
+    }
+    .btn-secondary {
+      background: #f1f3f9;
+      color: var(--dark);
+      border: none;
+      padding: 11px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html"><img src="../assets/logo-irelis.png" alt="Irelis" class="logo"></a>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 style="text-align:center; margin:30px 0;">Créez votre compte</h1>
+    <p class="muted" style="text-align:center; margin-bottom:30px;">
+      Rejoignez la meilleure plateforme de matching intelligent au Cameroun
+    </p>
+
+    <div class="register-container">
+      <!-- Candidat -->
+      <div class="register-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2202/2202135.png" alt="Candidat">
+        <h2>Je suis candidat</h2>
+        <p>Créez votre profil, recevez des offres avec score de compatibilité et générez votre CV.</p>
+        <form onsubmit="event.preventDefault(); alert('Compte candidat créé !');">
+          <input type="text" placeholder="Nom complet" required>
+          <input type="email" placeholder="Email" required>
+          <input type="tel" placeholder="Téléphone (ex: 612345678)" required>
+          <input type="password" placeholder="Mot de passe" required>
+          <button type="submit" class="btn-primary" style="width:100%;">S’inscrire</button>
+        </form>
+        <a href="cv-builder.html" class="btn-secondary">Créer mon CV d’abord</a>
+      </div>
+
+      <!-- Recruteur -->
+      <div class="register-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Recruteur">
+        <h2>Je suis recruteur</h2>
+        <p>Publiez vos offres, accédez à des profils qualifiés et gérez vos candidatures.</p>
+        <form onsubmit="event.preventDefault(); alert('Compte recruteur créé !');">
+          <input type="text" placeholder="Nom de l’entreprise" required>
+          <input type="email" placeholder="Email professionnel" required>
+          <input type="tel" placeholder="Téléphone WhatsApp" required>
+          <input type="password" placeholder="Mot de passe" required>
+          <button type="submit" class="btn-primary" style="width:100%;">Publier une offre</button>
+        </form>
+        <a href="post-offer.html" class="btn-secondary">Publier sans compte (MVP)</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>2025 Irelis — Plateforme de talents & opportunités digitales</p>
+      <p class="muted">
+        Contact : 
+          <a href="mailto:recrutement@ireliscameroun.com" style="color:inherit;">recrutement@ireliscameroun.com</a> 
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

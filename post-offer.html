@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Publier une offre – Irelis</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .form-container {
+      max-width: 750px;
+      margin: 30px auto;
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(31,32,65,0.08);
+    }
+    .form-section {
+      margin-bottom: 24px;
+    }
+    .form-section h3 {
+      color: var(--dark);
+      margin-bottom: 14px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #eee;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 11px;
+      margin: 6px 0;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-family: 'Poppins', sans-serif;
+    }
+    textarea { min-height: 80px; }
+    .btn-row {
+      display: flex;
+      gap: 12px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+    .btn-secondary {
+      background: #f1f3f9;
+      color: var(--dark);
+      border: none;
+      padding: 11px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html"><img src="../assets/logo-irelis.png" alt="Irelis" class="logo"></a>
+    </div>
+  </header>
+
+  <main>
+    <div class="form-container">
+      <h1>Publier une offre d’emploi</h1>
+      <p class="muted">Remplissez les informations ci-dessous. Votre offre sera visible immédiatement.</p>
+
+      <form onsubmit="event.preventDefault(); alert('Offre publiée avec succès ! (Prototype)');">
+        
+        <!-- Identité du recruteur -->
+        <div class="form-section">
+          <h3>À propos de votre entreprise</h3>
+          <input type="text" placeholder="Nom de l’entreprise *" required>
+          <input type="email" placeholder="Email de contact *" required>
+          <input type="tel" placeholder="Téléphone (WhatsApp) *" required>
+          <select required>
+            <option value="">Secteur d’activité *</option>
+            <option>Informatique, nouvelles technologies</option>
+            <option>Commercial, vente</option>
+            <option>Marketing, communication</option>
+            <option>Gestion, comptabilité, finance</option>
+            <option>Tourisme, hôtellerie, restauration</option>
+            <option>Transport, logistique</option>
+            <option>BTP, construction</option>
+            <option>Banque, assurance, finances</option>
+            <option>Industrie, production</option>
+            <option>Autre</option>
+          </select>
+        </div>
+
+        <!-- Détails de l’offre -->
+        <div class="form-section">
+          <h3>Détails de l’offre</h3>
+          <input type="text" placeholder="Intitulé du poste *" required>
+          <select required>
+            <option value="">Type de contrat *</option>
+            <option>CDI</option>
+            <option>CDD</option>
+            <option>Stage</option>
+            <option>Freelance / Mission</option>
+            <option>Alternance</option>
+          </select>
+          <input type="text" placeholder="Lieu (Ville, Région) *" required>
+          <textarea placeholder="Description du poste (missions, responsabilités) *" required></textarea>
+          <textarea placeholder="Profil recherché (compétences, expérience, diplôme) *" required></textarea>
+          <input type="text" placeholder="Compétences clés (séparées par des virgules, ex: React, Gestion de projet)" required>
+        </div>
+
+        <!-- Boutons -->
+        <div class="btn-row">
+          <button type="submit" class="btn-primary">Publier l’offre</button>
+          <button type="button" class="btn-secondary" onclick="window.history.back()">Annuler</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Irelis — Plateforme de talents & opportunités digitales</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

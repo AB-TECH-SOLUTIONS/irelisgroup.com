@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mon CV - Irelis</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .cv-builder { display: flex; gap: 30px; margin: 30px 0; flex-wrap: wrap; }
+    .form-col { flex: 1; min-width: 300px; }
+    .preview-col { flex: 1; min-width: 300px; }
+    .cv-preview { background: white; padding: 25px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); font-family: Arial, sans-serif; }
+    .cv-preview h2 { color: #1f2041; margin-top: 0; border-bottom: 2px solid #4e54c8; padding-bottom: 8px; }
+    .cv-item { margin-bottom: 12px; }
+    .cv-item h4 { margin: 8px 0 4px; color: #4e54c8; }
+    .cv-item p { margin: 4px 0; font-size: 0.95em; }
+    textarea, input, select { width: 100%; padding: 10px; margin: 6px 0; border: 1px solid #ddd; border-radius: 6px; }
+    button { margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html"><img src="../assets/logo-irelis.png" alt="Irelis" class="logo"></a>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Créez votre CV en 2 minutes</h1>
+    <p class="muted">Remplissez le formulaire à gauche → voyez votre CV en temps réel à droite.</p>
+
+    <div class="cv-builder">
+      <!-- Formulaire -->
+      <div class="form-col">
+        <h3>Vos informations</h3>
+        <input type="text" id="cv-name" placeholder="Nom Prénom" oninput="updateCV()">
+        <input type="email" id="cv-email" placeholder="Email" oninput="updateCV()">
+        <input type="tel" id="cv-phone" placeholder="Téléphone" oninput="updateCV()">
+        <input type="text" id="cv-title" placeholder="Poste visé (ex: Développeur Front-End)" oninput="updateCV()">
+        <textarea id="cv-summary" placeholder="Résumé (2-3 lignes)" rows="3" oninput="updateCV()"></textarea>
+        <textarea id="cv-skills" placeholder="Compétences (séparées par des virgules)" oninput="updateCV()"></textarea>
+        <textarea id="cv-exp" placeholder="Expérience (Poste, Entreprise, Dates)" rows="3" oninput="updateCV()"></textarea>
+        <textarea id="cv-edu" placeholder="Formation (Diplôme, École, Dates)" rows="2" oninput="updateCV()"></textarea>
+      </div>
+
+      <!-- Aperçu -->
+      <div class="preview-col">
+        <h3>Aperçu de votre CV</h3>
+        <div class="cv-preview" id="cv-output">
+          <h2 id="out-name">Votre Nom</h2>
+          <p id="out-title" style="font-weight:600; margin-top:-10px;">Poste visé</p>
+          <p id="out-contact">email@example.com | +237 XXX XXX XXX</p>
+          <div class="cv-item">
+            <h4>Profil</h4>
+            <p id="out-summary">Votre résumé professionnel ici.</p>
+          </div>
+          <div class="cv-item">
+            <h4>Compétences</h4>
+            <p id="out-skills">Compétence 1, Compétence 2</p>
+          </div>
+          <div class="cv-item">
+            <h4>Expérience</h4>
+            <p id="out-exp">Poste, Entreprise (Dates)</p>
+          </div>
+          <div class="cv-item">
+            <h4>Formation</h4>
+            <p id="out-edu">Diplôme, École (Dates)</p>
+          </div>
+        </div>
+        <button class="btn-primary" style="margin-top:20px;" onclick="alert('Fonctionnalité PDF en développement (MVP). Dans la V1, vous pourrez télécharger en PDF.')">
+          Télécharger en PDF
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Irelis</p>
+    </div>
+  </footer>
+
+  <script>
+    function updateCV() {
+      document.getElementById('out-name').textContent = document.getElementById('cv-name').value || 'Votre Nom';
+      document.getElementById('out-title').textContent = document.getElementById('cv-title').value || 'Poste visé';
+      document.getElementById('out-contact').textContent = 
+        (document.getElementById('cv-email').value || 'email@example.com') + ' | ' +
+        (document.getElementById('cv-phone').value || '+237 XXX XXX XXX');
+      document.getElementById('out-summary').textContent = document.getElementById('cv-summary').value || 'Votre résumé professionnel ici.';
+      document.getElementById('out-skills').textContent = document.getElementById('cv-skills').value || 'Compétence 1, Compétence 2';
+      document.getElementById('out-exp').textContent = document.getElementById('cv-exp').value || 'Poste, Entreprise (Dates)';
+      document.getElementById('out-edu').textContent = document.getElementById('cv-edu').value || 'Diplôme, École (Dates)';
+    }
+  </script>
+</body>
+</html>
