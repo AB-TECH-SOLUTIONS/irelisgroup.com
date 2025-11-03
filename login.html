@@ -1,73 +1,127 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Connexion – Irelis</title>
-  <link rel="stylesheet" href="../style.css">
-  <style>
-    .login-form {
-      max-width: 420px;
-      margin: 40px auto;
-      background: white;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 6px 18px rgba(31,32,65,0.08);
-    }
-    .form-group {
-      margin-bottom: 16px;
-      text-align: left;
-    }
-    .form-group label {
-      display: block;
-      margin-bottom: 6px;
-      font-weight: 600;
-      color: var(--dark);
-    }
-    .form-group input {
-      width: 100%;
-      padding: 11px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      font-family: 'Poppins', sans-serif;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Connexion | Irelis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="../index.html"><img src="../assets/logo-irelis.png" alt="Irelis" class="logo"></a>
+      <a href="index.html" class="logo-link">
+        <img src="assets/logo-irelis.png" alt="Irelis" class="logo" />
+      </a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="accompagnement.html">Accompagnement</a></li>
+          <li><a href="formation.html">Formation</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <a href="https://wa.me/237696712213" target="_blank" class="btn-social whatsapp">WhatsApp</a>
+        <a href="https://t.me/irelis" target="_blank" class="btn-social telegram">Telegram</a>
+        <a href="#" class="notification-icon">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M18 8C18 6.4087 16.6913 5.10002 15 5.10002H9C7.3087 5.10002 6 6.4087 6 8V18C6 19.5913 7.3087 20.9 9 20.9H15C16.6913 20.9 18 19.5913 18 18V8ZM16 18H8V8H16V18ZM11.9999 2.10002C12.5303 2.10002 13.0391 2.30999 13.4141 2.68501C13.7892 3.06003 14 3.56885 14 4.09998C14 4.63111 13.7892 5.13993 13.4141 5.51495C13.0391 5.88997 12.5303 6.09994 11.9999 6.09994C11.4695 6.09994 10.9607 5.88997 10.5857 5.51495C10.2107 5.13993 10 4.63111 10 4.09998C10 3.56885 10.2107 3.06003 10.5857 2.68501C10.9607 2.30999 11.4695 2.10002 11.9999 2.10002Z"/></svg>
+          <span class="badge">3</span>
+        </a>
+        <a href="login.html" class="btn-outline">Connexion</a>
+        <a href="recruteurs.html" class="btn-primary">Recruteur</a>
+      </div>
     </div>
   </header>
 
-  <main>
-    <div class="login-form">
-      <h1 style="text-align:center;">Connexion</h1>
-      <form onsubmit="event.preventDefault(); alert('Connexion simulée (prototype)')">
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" required>
+  <!-- Login Form -->
+  <section class="login-section">
+    <div class="container">
+      <div class="login-box">
+        <h2>Connectez-vous à votre compte</h2>
+        <form class="login-form">
+          <div class="form-group">
+            <label for="email">Adresse email</label>
+            <input type="email" id="email" placeholder="votre@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="password">Mot de passe</label>
+            <input type="password" id="password" placeholder="••••••••" required />
+          </div>
+          <div class="form-options">
+            <label class="checkbox">
+              <input type="checkbox" />
+              Se souvenir de moi
+            </label>
+            <a href="#" class="forgot-password">Mot de passe oublié ?</a>
+          </div>
+          <button type="submit" class="btn-primary">Se connecter</button>
+        </form>
+        <div class="signup-link">
+          Pas encore de compte ? <a href="register.html">Créez-en un gratuitement</a>
         </div>
-        <div class="form-group">
-          <label for="password">Mot de passe</label>
-          <input type="password" id="password" required>
-        </div>
-        <button type="submit" class="btn-primary" style="width:100%;">Se connecter</button>
-      </form>
-      <p style="text-align:center; margin-top:20px;">
-        Pas encore de compte ? <a href="register.html" style="color:var(--primary);">Inscrivez-vous</a>
-      </p>
+      </div>
     </div>
-  </main>
+  </section>
 
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
-      <p>2025 Irelis — Plateforme de talents & opportunités digitales</p>
-      <p class="muted">
-        Contact : 
-          <a href="mailto:recrutement@ireliscameroun.com" style="color:inherit;">recrutement@ireliscameroun.com</a> 
-      </p>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <img src="assets/logo-irelis.png" alt="Irelis" class="footer-logo" />
+          <p>La plateforme de référence pour trouver un emploi au Cameroun et en Afrique centrale.</p>
+          <div class="social-icons">
+            <a href="#"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0H1.325C.593 0 0 .576 0 1.281V22.719C0 23.424.593 24 1.325 24H22.675C23.407 24 24 23.424 24 22.719V1.281C24 .576 23.407 0 22.675 0zM7.093 20.323H3.506V9.135H7.093V20.323zm-1.795-12.63c-1.104 0-1.995-.896-1.995-2.004s.891-2.002 1.995-2.002 1.995.894 1.995 2.002-.891 2.004-1.995 2.004zm14.898 12.63H16.611V9.135h3.587V11.83c.5 0 1.003 0 1.506 0 1.183 0 1.667-.925 1.667-2.281V9.135h3.587v11.188z"/></svg></a>
+            <a href="#"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 00-1.677-5.282 10 10 0 00-8.214-4.274 10 10 0 00-8.214 4.274 10 10 0 00-1.677 5.282 10 10 0 00-1.77 8.226 10 10 0 001.77 8.226 10 10 0 008.214 4.274 10 10 0 008.214-4.274 10 10 0 001.677-5.282 10 10 0 001.77-8.226zM12 22C5.925 22 1 17.075 1 11S5.925 0 12 0s11 4.925 11 11-4.925 11-11 11zm6.5-15.5c-1.2 0-2.4.6-3.2 1.4L12 11.2l-3.3-3.3c-.8-.8-2-1.4-3.2-1.4-2.2 0-4 1.8-4 4 0 1.2.6 2.4 1.4 3.2L11.2 17l3.3 3.3c.8.8 2 1.4 3.2 1.4 2.2 0 4-1.8 4-4 0-1.2-.6-2.4-1.4-3.2L17 11.2l3.3-3.3c.8-.8 1.4-2 1.4-3.2 0-2.2-1.8-4-4-4z"/></svg></a>
+            <a href="#"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.55v-5.876c0-1.405-.028-3.205-1.965-3.205-1.966 0-2.267 1.524-2.267 3.108v5.973h-3.55V9.135h3.404v1.648c.478-.946 1.667-1.95 3.404-1.95 3.642 0 4.325 2.356 4.325 5.444v6.177zM4.592 0C3.064 0 2.03 1.034 2.03 2.562c0 1.528 1.034 2.562 2.562 2.562 1.528 0 2.562-1.034 2.562-2.562C7.154 1.034 6.12 0 4.592 0zm0 6.557H2.03v13.895h2.562V6.557z"/></svg></a>
+            <a href="#"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.697 16.978c-1.104 0-2.002-.898-2.002-2.002s.898-2.002 2.002-2.002 2.002.898 2.002 2.002-.898 2.002-2.002 2.002zm-11.394 0c-1.104 0-2.002-.898-2.002-2.002s.898-2.002 2.002-2.002 2.002.898 2.002 2.002-.898 2.002-2.002 2.002zm0-6.48c-1.104 0-2.002-.898-2.002-2.002s.898-2.002 2.002-2.002 2.002.898 2.002 2.002-.898 2.002-2.002 2.002z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Candidats</h4>
+          <ul>
+            <li><a href="index.html">Rechercher un emploi</a></li>
+            <li><a href="cv.html">Créer mon CV</a></li>
+            <li><a href="accompagnement.html">Accompagnement</a></li>
+            <li><a href="formation.html">Formations</a></li>
+            <li><a href="conseils-careers.html">Conseils carrière</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Entreprises</h4>
+          <ul>
+            <li><a href="publish-offer.html">Publier une offre</a></li>
+            <li><a href="solutions-rh.html">Nos solutions RH</a></li>
+            <li><a href="tarifs.html">Tarifs</a></li>
+            <li><a href="espace-recruteur.html">Espace recruteur</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><svg width="20" height="20" fill="none" stroke="#9CA3AF" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.995 1.995 0 01-2.828 0l-4.244-4.244a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg> BP : 5574 Douala-Akwa, Cameroun</li>
+            <li><svg width="20" height="20" fill="none" stroke="#9CA3AF" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5z"/><path d="M8 15h8M8 11h8M8 7h8"/></svg> +237 696 71 22 13</li>
+            <li><svg width="20" height="20" fill="none" stroke="#9CA3AF" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14v2H5v-2z"/><path d="M3 8h18v6H3V8z"/></svg> contact@irelisgroup.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Irelis. Tous droits réservés.</p>
+        <div class="footer-links">
+          <a href="careers.html">Nous Rejoindre</a>
+          <a href="faq.html">FAQ</a>
+          <a href="mentions-legales.html">Mentions légales</a>
+          <a href="politique-confidentialite.html">Politique de confidentialité</a>
+          <a href="cgu.html">CGU</a>
+        </div>
+      </div>
     </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

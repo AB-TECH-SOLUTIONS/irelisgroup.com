@@ -1,150 +1,169 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Irelis - Espace Recruteurs</title>
-
-  <div class="banner" style="background: #e8f4ff; color: var(--dark); text-align: center; padding: 14px; margin: 20px 0; border-radius: 10px; border-left: 4px solid var(--primary);">
-    <strong>💡 Publiez une offre en 3 minutes — recevez des CV avec score de compatibilité</strong>
-  </div>
-
-  <link rel="stylesheet" href="../style.css">
-  <style>
-    .recruiter-section {
-      background: #fff;
-      padding: 24px;
-      border-radius: 10px;
-      margin: 20px 0;
-      box-shadow: 0 4px 12px rgba(31,32,65,0.05);
-    }
-    .benefits-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      margin: 24px 0;
-    }
-    .benefit-card {
-      background: #f8f9fc;
-      padding: 18px;
-      border-radius: 8px;
-      border-left: 4px solid var(--primary);
-    }
-    .cta-box {
-      background: linear-gradient(135deg, #4e54c8, #6a71e6);
-      color: white;
-      padding: 30px;
-      border-radius: 12px;
-      text-align: center;
-      margin: 30px 0;
-    }
-    .cta-box a {
-      color: white;
-      text-decoration: underline;
-    }
-    ul.checklist {
-      padding-left: 20px;
-      margin: 16px 0;
-    }
-    ul.checklist li {
-      margin-bottom: 8px;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Recruteurs | Irelis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="../index.html"><img src="../assets/logo-irelis.png" alt="Irelis" class="logo"></a>
+      <a href="index.html" class="logo-link">
+        <img src="assets/logo-irelis.png" alt="Irelis" class="logo" />
+      </a>
       <nav class="main-nav">
         <ul>
-          <li><a href="../index.html">Accueil</a></li>
-          <li><a href="offers.html">Offres</a></li>
-          <li><a href="recruteurs.html">Recruteurs</a></li>
-          <li class="auth"><a href="login.html">Connexion</a></li>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="accompagnement.html">Accompagnement</a></li>
+          <li><a href="formation.html">Formation</a></li>
+          <li><a href="blog.html">Blog</a></li>
         </ul>
       </nav>
+      <div class="header-actions">
+        <a href="https://wa.me/237696712213" target="_blank" class="btn-social whatsapp">WhatsApp</a>
+        <a href="https://t.me/irelis" target="_blank" class="btn-social telegram">Telegram</a>
+        <a href="#" class="notification-icon">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M18 8C18 6.4087 16.6913 5.10002 15 5.10002H9C7.3087 5.10002 6 6.4087 6 8V18C6 19.5913 7.3087 20.9 9 20.9H15C16.6913 20.9 18 19.5913 18 18V8ZM16 18H8V8H16V18ZM11.9999 2.10002C12.5303 2.10002 13.0391 2.30999 13.4141 2.68501C13.7892 3.06003 14 3.56885 14 4.09998C14 4.63111 13.7892 5.13993 13.4141 5.51495C13.0391 5.88997 12.5303 6.09994 11.9999 6.09994C11.4695 6.09994 10.9607 5.88997 10.5857 5.51495C10.2107 5.13993 10 4.63111 10 4.09998C10 3.56885 10.2107 3.06003 10.5857 2.68501C10.9607 2.30999 11.4695 2.10002 11.9999 2.10002Z"/></svg>
+          <span class="badge">3</span>
+        </a>
+        <a href="login.html" class="btn-outline">Connexion</a>
+        <a href="recruteurs.html" class="btn-primary">Recruteur</a>
+      </div>
     </div>
   </header>
 
-  <main class="container">
-    <section style="margin:30px 0; text-align:center;">
-      <h1>Espace Recruteurs</h1>
-    </section>
+  <!-- Hero -->
+  <section class="hero-recruiter">
+    <div class="container">
+      <h1>Recrutez les meilleurs talents au Cameroun et en Afrique</h1>
+      <p>Publiez votre offre, accédez à notre base de candidats qualifiés, et trouvez le profil idéal en quelques clics.</p>
+      <button class="btn-primary" onclick="window.location.href='publish-offer.html'">Publier une offre gratuitement</button>
+    </div>
+  </section>
 
-    <!-- Pourquoi Irelis ? -->
-    <section class="recruiter-section">
-      <h2>Pourquoi recruter avec Irelis ?</h2>
-      <div class="benefits-grid">
-        <div class="benefit-card">
-          <h3>🎯 Matching intelligent</h3>
-          <p>Recevez uniquement les profils dont le score de compatibilité est ≥ 70 %.</p>
+  <!-- Features -->
+  <section class="features-section">
+    <div class="container">
+      <h2>Pourquoi choisir Irelis ?</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          </div>
+          <div>
+            <h3>Publication rapide</h3>
+            <p>Publiez votre offre en moins de 5 minutes. Aucune complexité, aucun engagement.</p>
+          </div>
         </div>
-        <div class="benefit-card">
-          <h3>📱 Contact direct WhatsApp</h3>
-          <p>Échangez instantanément avec les candidats via leur numéro vérifié.</p>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4zm6 0h-2v-2h2v2zm-6 0h-2v-2h2v2zm-6 0h-2v-2h2v2z"/></svg>
+          </div>
+          <div>
+            <h3>Base de candidats qualifiés</h3>
+            <p>Accédez à des milliers de profils vérifiés, avec CV, expériences et compétences.</p>
+          </div>
         </div>
-        <div class="benefit-card">
-          <h3>🇨🇲 Focus Cameroun</h3>
-          <p>Base de talents locale, à jour, avec disponibilité et localisation précises.</p>
-        </div>
-        <div class="benefit-card">
-          <h3>📄 CV structurés</h3>
-          <p>Les candidats créent leur CV sur Irelis → données fiables et comparables.</p>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm6 0h-2v-4h2v4zm2 0h-2v-4h2v4zm-6-9H7V6h2v2zm6 0h-2V6h2v2zm2 0h-2V6h2v2z"/></svg>
+          </div>
+          <div>
+            <h3>Outils de gestion</h3>
+            <p>Suivez les candidatures, organisez vos entretiens, et collaborez avec votre équipe.</p>
+          </div>
         </div>
       </div>
-    </section>
-
-    <!-- Comment ça marche -->
-    <section class="recruiter-section">
-      <h2>Comment publier une offre ?</h2>
-      <ol class="checklist">
-        <li>Créez un compte recruteur (gratuit)</li>
-        <li>Remplissez le formulaire d’offre : poste, compétences, lieu, type de contrat</li>
-        <li>Validez et publiez → votre offre est visible immédiatement</li>
-        <li>
-                        <a href="post-offer.html" style="color:var(--primary); text-decoration:underline;">
-                           Publiez votre offre dès maintenant
-                       </a>
-                     </li>
-        <li>Recevez les candidatures avec score % et accédez aux CV complets</li>
-      </ol>
-    </section>
-
-    <!-- Offre spéciale MVP -->
-    <div class="cta-box">
-      <h3>🚀 Offre de lancement</h3>
-      <p>Les 50 premiers recruteurs publient <strong>gratuitement à vie</strong> !</p>
-      <p>
-        <a href="https://wa.me/237696712213?text=Bonjour%20Irelis,%20je%20souhaite%20publier%20une%20offre%20gratuite." 
-           target="_blank"
-           style="font-weight:600; text-decoration:underline;">
-          Contactez-nous sur WhatsApp pour activer votre compte
-        </a>
-      </p>
     </div>
+  </section>
 
-    <!-- FAQ légère -->
-    <section class="recruiter-section">
-      <h2>Questions fréquentes</h2>
-      <ul class="checklist">
-        <li><strong>Est-ce payant ?</strong> → Non pendant la phase MVP (gratuit pour les pionniers).</li>
-        <li><strong>Combien de temps dure une offre ?</strong> → 30 jours (renouvelable).</li>
-        <li><strong>Puis-je modifier mon offre ?</strong> → Oui, à tout moment.</li>
-        <li><strong>Comment recevoir plus de candidatures ?</strong> → Utilisez des mots-clés clairs et indiquez si le télétravail est possible.</li>
-      </ul>
-    </section>
-  </main>
+  <!-- Testimonial -->
+  <section class="testimonial-section">
+    <div class="container">
+      <h2>Ils nous font confiance</h2>
+      <div class="testimonial-card">
+        <div class="testimonial-quote">
+          “Grâce à Irelis, nous avons recruté 3 développeurs en 2 semaines. Leur base de CV est incroyablement riche et bien structurée.”
+        </div>
+        <div class="testimonial-author">
+          — Agathe N., Directrice RH, TechCorp Solutions
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Prêt à publier votre première offre ?</h2>
+      <p>Rejoignez des centaines d’entreprises qui font confiance à Irelis pour leurs recrutements.</p>
+      <div class="cta-buttons">
+        <button class="btn-primary" onclick="window.location.href='publish-offer.html'">Commencer maintenant</button>
+        <a href="mailto:rh@irelisgroup.com" class="btn-outline">Demander un devis personnalisé</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
-      <p>© 2025 Irelis — Plateforme de talents & opportunités digitales</p>
-      <p class="muted">
-        Contact : 
-        <a href="mailto:recrutement@ireliscameroun.com" style="color:inherit;">recrutement@ireliscameroun.com</a>
-      </p>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <img src="assets/logo-irelis.png" alt="Irelis" class="footer-logo" />
+          <p>La plateforme de référence pour trouver un emploi au Cameroun et en Afrique centrale.</p>
+          <div class="social-icons">
+            <a href="#"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0H1.325C.593 0 0 .576 0 1.281V22.719C0 23.424.593 24 1.325 24H22.675C23.407 24 24 23.424 24 22.719V1.281C24 .576 23.407 0 22.675 0zM7.093 20.323H3.506V9.135H7.093V20.323zm-1.795-12.63c-1.104 0-1.995-.896-1.995-2.004s.891-2.002 1.995-2.002 1.995.894 1.995 2.002-.891 2.004-1.995 2.004zm14.898 12.63H16.611V9.135h3.587V11.83c.5 0 1.003 0 1.506 0 1.183 0 1.667-.925 1.667-2.281V9.135h3.587v11.188z"/></svg></a>
+            <a href="#"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 00-1.677-5.282 10 10 0 00-8.214-4.274 10 10 0 00-8.214 4.274 10 10 0 00-1.677 5.282 10 10 0 00-1.77 8.226 10 10 0 001.77 8.226 10 10 0 008.214 4.274 10 10 0 008.214-4.274 10 10 0 001.677-5.282 10 10 0 001.77-8.226zM12 22C5.925 22 1 17.075 1 11S5.925 0 12 0s11 4.925 11 11-4.925 11-11 11zm6.5-15.5c-1.2 0-2.4.6-3.2 1.4L12 11.2l-3.3-3.3c-.8-.8-2-1.4-3.2-1.4-2.2 0-4 1.8-4 4 0 1.2.6 2.4 1.4 3.2L11.2 17l3.3 3.3c.8.8 2 1.4 3.2 1.4 2.2 0 4-1.8 4-4 0-1.2-.6-2.4-1.4-3.2L17 11.2l3.3-3.3c.8-.8 1.4-2 1.4-3.2 0-2.2-1.8-4-4-4z"/></svg></a>
+            <a href="#"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.55v-5.876c0-1.405-.028-3.205-1.965-3.205-1.966 0-2.267 1.524-2.267 3.108v5.973h-3.55V9.135h3.404v1.648c.478-.946 1.667-1.95 3.404-1.95 3.642 0 4.325 2.356 4.325 5.444v6.177zM4.592 0C3.064 0 2.03 1.034 2.03 2.562c0 1.528 1.034 2.562 2.562 2.562 1.528 0 2.562-1.034 2.562-2.562C7.154 1.034 6.12 0 4.592 0zm0 6.557H2.03v13.895h2.562V6.557z"/></svg></a>
+            <a href="#"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.697 16.978c-1.104 0-2.002-.898-2.002-2.002s.898-2.002 2.002-2.002 2.002.898 2.002 2.002-.898 2.002-2.002 2.002zm-11.394 0c-1.104 0-2.002-.898-2.002-2.002s.898-2.002 2.002-2.002 2.002.898 2.002 2.002-.898 2.002-2.002 2.002zm0-6.48c-1.104 0-2.002-.898-2.002-2.002s.898-2.002 2.002-2.002 2.002.898 2.002 2.002-.898 2.002-2.002 2.002z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Candidats</h4>
+          <ul>
+            <li><a href="index.html">Rechercher un emploi</a></li>
+            <li><a href="cv.html">Créer mon CV</a></li>
+            <li><a href="accompagnement.html">Accompagnement</a></li>
+            <li><a href="formation.html">Formations</a></li>
+            <li><a href="blog.html">Conseils carrière</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Entreprises</h4>
+          <ul>
+            <li><a href="publish-offer.html">Publier une offre</a></li>
+            <li><a href="solutions-rh.html">Nos solutions RH</a></li>
+            <li><a href="tarifs.html">Tarifs</a></li>
+            <li><a href="espace-recruteur.html">Espace recruteur</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><svg width="20" height="20" fill="none" stroke="#9CA3AF" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.995 1.995 0 01-2.828 0l-4.244-4.244a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg> BP : 5574 Douala-Akwa, Cameroun</li>
+            <li><svg width="20" height="20" fill="none" stroke="#9CA3AF" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5z"/><path d="M8 15h8M8 11h8M8 7h8"/></svg> +237 696 71 22 13</li>
+            <li><svg width="20" height="20" fill="none" stroke="#9CA3AF" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14v2H5v-2z"/><path d="M3 8h18v6H3V8z"/></svg> contact@irelisgroup.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Irelis. Tous droits réservés.</p>
+        <div class="footer-links">
+          <a href="careers.html">Nous Rejoindre</a>
+          <a href="faq.html">FAQ</a>
+          <a href="mentions-legales.html">Mentions légales</a>
+          <a href="politique-confidentialite.html">Politique de confidentialité</a>
+          <a href="cgu.html">CGU</a>
+        </div>
+      </div>
     </div>
   </footer>
 
-  <script src="../script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

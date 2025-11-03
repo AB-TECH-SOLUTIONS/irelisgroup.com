@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Inscription | Irelis</title>
+  <title>Blog | Irelis</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -37,42 +37,82 @@
     </div>
   </header>
 
-  <!-- Register Form -->
-  <section class="login-section">
-    <div class="container">
-      <div class="login-box">
-        <h2>Créez votre compte gratuitement</h2>
-        <form class="login-form">
-          <div class="form-group">
-            <label for="name">Nom complet</label>
-            <input type="text" id="name" placeholder="Jean Dupont" required />
+  <main>
+    <section class="hero">
+
+      <!-- Bannière slogan -->
+      <div class="banner" style="background: linear-gradient(135deg, #4e54c8, #6a71e6); color: white; text-align: center; padding: 16px; margin: 20px 0; border-radius: 10px;">
+        <strong>🚀 92 % des recruteurs trouvent un candidat compatible en moins de 72h</strong>
+      </div>
+
+    <section class="features container">
+      <div class="feature">
+        <h3>Pour les candidats</h3>
+        <p>Créez votre profil, postulez directement et recevez des recommandations adaptées.</p>
+      </div>
+      <div class="feature">
+        <h3>Pour les recruteurs</h3>
+        <p>Publiez vos offres, trouvez des talents qualifiés et gérez vos candidatures.</p>
+      </div>
+      <div class="feature">
+        <h3>Plateforme locale</h3>
+        <p>Focalisée sur le marché camerounais avec une vision africaine.</p>
+      </div>
+    </section>
+
+    <section class="how container">
+      <h2>Comment ça marche</h2>
+      <ol>
+        <li>Recherchez une offre ou créez un profil.</li>
+        <li>Postulez en un clic ou contactez le recruteur.</li>
+        <li>Recevez des recommandations et suivez vos candidatures.</li>
+      </ol>
+    </section>
+
+    <!-- Histoire & Fondatrice -->
+    <section class="container" style="margin:50px 0; text-align:center;">
+      <div class="centered-card">
+        <h2>Notre histoire</h2>
+        <p class="muted">Fondée en 2018 en France, Irelis naît d’une simple observation : les talents camerounais sont nombreux, mais mal connectés aux opportunités locales.</p>
+        <div style="display:flex; align-items:center; gap:20px; margin-top:20px; flex-wrap:wrap; justify-content:center; text-align:center;">
+          <div style="background:#f0f4ff; width:100px; height:100px; border-radius:50%; display:flex; align-items:center; justify-content:center; color:var(--primary); font-weight:600; font-size:1.2rem;">
+        A. N.
           </div>
-          <div class="form-group">
-            <label for="email">Adresse email</label>
-            <input type="email" id="email" placeholder="votre@email.com" required />
+          <div style="text-align:left; flex:1; min-width:250px;">
+            <h3>Par AGATHA NGO MBODE, Fondatrice</h3>
+            <p>« J’ai moi-même postulé à plus de 80 offres sans réponse. Irelis est né pour que plus aucun talent ne reste invisible. »</p>
           </div>
-          <div class="form-group">
-            <label for="password">Mot de passe</label>
-            <input type="password" id="password" placeholder="••••••••" required />
-          </div>
-          <div class="form-group">
-            <label for="confirm-password">Confirmez le mot de passe</label>
-            <input type="password" id="confirm-password" placeholder="••••••••" required />
-          </div>
-          <div class="form-options">
-            <label class="checkbox">
-              <input type="checkbox" required />
-              J'accepte les <a href="cgu.html">Conditions Générales d'Utilisation</a>
-            </label>
-          </div>
-          <button type="submit" class="btn-primary">Créer mon compte</button>
-        </form>
-        <div class="signup-link">
-          Déjà inscrit ? <a href="login.html">Connectez-vous</a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- Témoignages -->
+    <section class="container" style="margin:50px 0; text-align:center;">
+      <h2>Ils nous font confiance</h2>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:20px; margin:30px 0; justify-content:center;">
+        <div style="background:#fff; padding:20px; border-radius:10px; box-shadow:0 4px 8px rgba(0,0,0,0.05);text-align:left;">
+          <p>« Grâce à Irelis, j’ai trouvé un stage en 3 jours ! Le score de compatibilité m’a évité de postuler à des offres inadaptées. »</p>
+          <strong>– Jean D., Étudiant en informatique</strong>
+        </div>
+        <div style="background:#fff; padding:20px; border-radius:10px; box-shadow:0 4px 8px rgba(0,0,0,0.05);text-align:lef;">
+          <p>« En tant que PME, on n’a pas de RH. Irelis nous a envoyé 5 profils qualifiés en 48h. »</p>
+          <strong>– Sarah M., Dirigeante TechLocal</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partenaires -->
+    <section class="container" style="margin:50px 0; text-align:center;">
+      <h2>Entreprises partenaires</h2>
+      <p class="muted">Ils recrutent déjà sur Irelis</p>
+      <div style="display:flex; justify-content:center; flex-wrap:wrap; gap:20px; margin-top:20px; opacity:0.8;">
+        <div>MTN Cameroun</div>
+        <div>Société Générale</div>
+        <div>Orange Cameroun</div>
+        <div>Canal+</div>
+        <div>TechLocal</div>
+      </div>
+    </section>
 
   <!-- Footer -->
   <footer class="site-footer">

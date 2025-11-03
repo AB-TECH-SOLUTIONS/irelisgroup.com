@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Inscription | Irelis</title>
+  <title>Publier une offre | Irelis</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -37,40 +37,57 @@
     </div>
   </header>
 
-  <!-- Register Form -->
-  <section class="login-section">
+  <!-- Publish Offer Form -->
+  <section class="publish-section">
     <div class="container">
-      <div class="login-box">
-        <h2>Créez votre compte gratuitement</h2>
-        <form class="login-form">
-          <div class="form-group">
-            <label for="name">Nom complet</label>
-            <input type="text" id="name" placeholder="Jean Dupont" required />
-          </div>
-          <div class="form-group">
-            <label for="email">Adresse email</label>
-            <input type="email" id="email" placeholder="votre@email.com" required />
-          </div>
-          <div class="form-group">
-            <label for="password">Mot de passe</label>
-            <input type="password" id="password" placeholder="••••••••" required />
-          </div>
-          <div class="form-group">
-            <label for="confirm-password">Confirmez le mot de passe</label>
-            <input type="password" id="confirm-password" placeholder="••••••••" required />
-          </div>
-          <div class="form-options">
-            <label class="checkbox">
-              <input type="checkbox" required />
-              J'accepte les <a href="cgu.html">Conditions Générales d'Utilisation</a>
-            </label>
-          </div>
-          <button type="submit" class="btn-primary">Créer mon compte</button>
-        </form>
-        <div class="signup-link">
-          Déjà inscrit ? <a href="login.html">Connectez-vous</a>
+      <h1>Publiez votre offre d’emploi</h1>
+      <p>Remplissez ce formulaire pour diffuser votre offre à des milliers de candidats qualifiés.</p>
+      <form class="publish-form">
+        <div class="form-group">
+          <label for="job-title">Titre du poste</label>
+          <input type="text" id="job-title" placeholder="Ingénieur Logiciel Senior" required />
         </div>
-      </div>
+        <div class="form-group">
+          <label for="company">Nom de l’entreprise</label>
+          <input type="text" id="company" placeholder="TechCorp Solutions" required />
+        </div>
+        <div class="form-group">
+          <label for="location">Localisation</label>
+          <input type="text" id="location" placeholder="Douala, Cameroun (À distance)" required />
+        </div>
+        <div class="form-group">
+          <label for="contract-type">Type de contrat</label>
+          <select id="contract-type" required>
+            <option value="">Sélectionnez</option>
+            <option value="CDI">CDI</option>
+            <option value="CDD">CDD</option>
+            <option value="Stage">Stage</option>
+            <option value="Freelance">Freelance</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="salary">Salaire (FCFA)</label>
+          <input type="text" id="salary" placeholder="800k – 1.2M FCFA" required />
+        </div>
+        <div class="form-group">
+          <label for="description">Description du poste</label>
+          <textarea id="description" rows="6" placeholder="Décrivez les missions, compétences requises, avantages..." required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="application-method">Méthode de candidature</label>
+          <select id="application-method" required>
+            <option value="">Sélectionnez</option>
+            <option value="email">Par email</option>
+            <option value="link">Via lien externe</option>
+            <option value="platform">Via la plateforme Irelis</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="contact-email">Email de contact</label>
+          <input type="email" id="contact-email" placeholder="contact@techcorp.com" required />
+        </div>
+        <button type="submit" class="btn-primary">Publier l’offre</button>
+      </form>
     </div>
   </section>
 

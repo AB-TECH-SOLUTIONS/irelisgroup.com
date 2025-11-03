@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Inscription | Irelis</title>
+  <title>Créer mon CV | Irelis</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -37,38 +37,61 @@
     </div>
   </header>
 
-  <!-- Register Form -->
-  <section class="login-section">
+  <!-- Hero -->
+  <section class="hero">
     <div class="container">
-      <div class="login-box">
-        <h2>Créez votre compte gratuitement</h2>
-        <form class="login-form">
-          <div class="form-group">
-            <label for="name">Nom complet</label>
-            <input type="text" id="name" placeholder="Jean Dupont" required />
+      <h1>Créez votre CV en quelques minutes</h1>
+      <p>Un outil simple et efficace pour mettre en valeur vos compétences et expériences professionnelles.</p>
+    </div>
+  </section>
+
+  <!-- CV Builder -->
+  <section class="cv-builder-section">
+    <div class="container">
+      <h1>Créez votre CV en 2 minutes</h1>
+      <p class="muted">Remplissez le formulaire à gauche → voyez votre CV en temps réel à droite.</p>
+
+      <div class="cv-builder-container">
+        <!-- Formulaire -->
+        <div class="form-col">
+          <h3>Vos informations</h3>
+          <input type="text" id="cv-name" placeholder="Nom Prénom" oninput="updateCV()">
+          <input type="email" id="cv-email" placeholder="Email" oninput="updateCV()">
+          <input type="tel" id="cv-phone" placeholder="Téléphone" oninput="updateCV()">
+          <input type="text" id="cv-title" placeholder="Poste visé (ex: Développeur Front-End)" oninput="updateCV()">
+          <textarea id="cv-summary" placeholder="Résumé (2-3 lignes)" rows="3" oninput="updateCV()"></textarea>
+          <textarea id="cv-skills" placeholder="Compétences (séparées par des virgules)" oninput="updateCV()"></textarea>
+          <textarea id="cv-exp" placeholder="Expérience (Poste, Entreprise, Dates)" rows="3" oninput="updateCV()"></textarea>
+          <textarea id="cv-edu" placeholder="Formation (Diplôme, École, Dates)" rows="2" oninput="updateCV()"></textarea>
+        </div>
+
+        <!-- Aperçu -->
+        <div class="preview-col">
+          <h3>Aperçu de votre CV</h3>
+          <div class="cv-preview" id="cv-output">
+            <h2 id="out-name">Votre Nom</h2>
+            <p id="out-title" style="font-weight:600; margin-top:-10px;">Poste visé</p>
+            <p id="out-contact">email@example.com | +237 XXX XXX XXX</p>
+            <div class="cv-item">
+              <h4>Profil</h4>
+              <p id="out-summary">Votre résumé professionnel ici.</p>
+            </div>
+            <div class="cv-item">
+              <h4>Compétences</h4>
+              <p id="out-skills">Compétence 1, Compétence 2</p>
+            </div>
+            <div class="cv-item">
+              <h4>Expérience</h4>
+              <p id="out-exp">Poste, Entreprise (Dates)</p>
+            </div>
+            <div class="cv-item">
+              <h4>Formation</h4>
+              <p id="out-edu">Diplôme, École (Dates)</p>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="email">Adresse email</label>
-            <input type="email" id="email" placeholder="votre@email.com" required />
-          </div>
-          <div class="form-group">
-            <label for="password">Mot de passe</label>
-            <input type="password" id="password" placeholder="••••••••" required />
-          </div>
-          <div class="form-group">
-            <label for="confirm-password">Confirmez le mot de passe</label>
-            <input type="password" id="confirm-password" placeholder="••••••••" required />
-          </div>
-          <div class="form-options">
-            <label class="checkbox">
-              <input type="checkbox" required />
-              J'accepte les <a href="cgu.html">Conditions Générales d'Utilisation</a>
-            </label>
-          </div>
-          <button type="submit" class="btn-primary">Créer mon compte</button>
-        </form>
-        <div class="signup-link">
-          Déjà inscrit ? <a href="login.html">Connectez-vous</a>
+          <button class="btn-primary" style="margin-top:20px; width: 100%;" onclick="alert('✅ Fonctionnalité PDF en développement.\nDans la version 1, vous pourrez télécharger votre CV en PDF.')">
+            Télécharger en PDF
+          </button>
         </div>
       </div>
     </div>
@@ -129,6 +152,18 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    function updateCV() {
+      document.getElementById('out-name').textContent = document.getElementById('cv-name').value || 'Votre Nom';
+      document.getElementById('out-title').textContent = document.getElementById('cv-title').value || 'Poste visé';
+      document.getElementById('out-contact').textContent = 
+        (document.getElementById('cv-email').value || 'email@example.com') + ' | ' +
+        (document.getElementById('cv-phone').value || '+237 XXX XXX XXX');
+      document.getElementById('out-summary').textContent = document.getElementById('cv-summary').value || 'Votre résumé professionnel ici.';
+      document.getElementById('out-skills').textContent = document.getElementById('cv-skills').value || 'Compétence 1, Compétence 2';
+      document.getElementById('out-exp').textContent = document.getElementById('cv-exp').value || 'Poste, Entreprise (Dates)';
+      document.getElementById('out-edu').textContent = document.getElementById('cv-edu').value || 'Diplôme, École (Dates)';
+    }
+  </script>
 </body>
 </html>

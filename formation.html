@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Inscription | Irelis</title>
+  <title>Formations | Irelis</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -37,40 +37,60 @@
     </div>
   </header>
 
-  <!-- Register Form -->
-  <section class="login-section">
+  <!-- Hero -->
+  <section class="hero">
     <div class="container">
-      <div class="login-box">
-        <h2>Créez votre compte gratuitement</h2>
-        <form class="login-form">
-          <div class="form-group">
-            <label for="name">Nom complet</label>
-            <input type="text" id="name" placeholder="Jean Dupont" required />
+      <h1>Formations professionnelles pour booster votre carrière</h1>
+      <p>Des cours pratiques, dispensés par des experts du terrain, pour vous rendre immédiatement opérationnel sur le marché du travail.</p>
+    </div>
+  </section>
+
+  <!-- Courses -->
+  <section class="courses-section">
+    <div class="container">
+      <h2>Nos formations populaires</h2>
+      <div class="courses-grid">
+        <div class="course-card">
+          <div class="course-badge">Nouveau</div>
+          <h3>Développement Web Full-Stack</h3>
+          <p>Apprenez à créer des applications web complètes avec HTML, CSS, JavaScript, React et Node.js.</p>
+          <div class="course-meta">
+            <span>📍 En ligne</span>
+            <span>🕒 8 semaines</span>
+            <span>💰 150 000 FCFA</span>
           </div>
-          <div class="form-group">
-            <label for="email">Adresse email</label>
-            <input type="email" id="email" placeholder="votre@email.com" required />
+          <button class="btn-outline" onclick="alert('Détails de la formation bientôt disponibles !')">Détails</button>
+        </div>
+        <div class="course-card">
+          <h3>Marketing Digital & Réseaux Sociaux</h3>
+          <p>Maîtrisez les outils du marketing digital : SEO, publicité Facebook/Google, analytics, etc.</p>
+          <div class="course-meta">
+            <span>📍 En ligne</span>
+            <span>🕒 6 semaines</span>
+            <span>💰 120 000 FCFA</span>
           </div>
-          <div class="form-group">
-            <label for="password">Mot de passe</label>
-            <input type="password" id="password" placeholder="••••••••" required />
+          <button class="btn-outline" onclick="alert('Détails de la formation bientôt disponibles !')">Détails</button>
+        </div>
+        <div class="course-card">
+          <h3>Gestion de Projet Agile</h3>
+          <p>Devenez chef de projet certifié avec les méthodologies Scrum, Kanban et gestion d’équipes.</p>
+          <div class="course-meta">
+            <span>📍 Yaoundé</span>
+            <span>🕒 4 semaines</span>
+            <span>💰 180 000 FCFA</span>
           </div>
-          <div class="form-group">
-            <label for="confirm-password">Confirmez le mot de passe</label>
-            <input type="password" id="confirm-password" placeholder="••••••••" required />
-          </div>
-          <div class="form-options">
-            <label class="checkbox">
-              <input type="checkbox" required />
-              J'accepte les <a href="cgu.html">Conditions Générales d'Utilisation</a>
-            </label>
-          </div>
-          <button type="submit" class="btn-primary">Créer mon compte</button>
-        </form>
-        <div class="signup-link">
-          Déjà inscrit ? <a href="login.html">Connectez-vous</a>
+          <button class="btn-outline" onclick="alert('Détails de la formation bientôt disponibles !')">Détails</button>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Prêt à investir dans votre avenir ?</h2>
+      <p>Rejoignez des centaines d’apprenants qui ont transformé leur carrière grâce à nos formations.</p>
+      <button class="btn-primary" onclick="window.location.href='contact.html'">Voir toutes les formations</button>
     </div>
   </section>
 

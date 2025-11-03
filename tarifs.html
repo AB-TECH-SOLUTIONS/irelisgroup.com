@@ -2,8 +2,8 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Inscription | Irelis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tarifs – Irelis</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -37,38 +37,95 @@
     </div>
   </header>
 
-  <!-- Register Form -->
-  <section class="login-section">
+  <!-- Hero -->
+  <section class="hero">
     <div class="container">
-      <div class="login-box">
-        <h2>Créez votre compte gratuitement</h2>
-        <form class="login-form">
-          <div class="form-group">
-            <label for="name">Nom complet</label>
-            <input type="text" id="name" placeholder="Jean Dupont" required />
-          </div>
-          <div class="form-group">
-            <label for="email">Adresse email</label>
-            <input type="email" id="email" placeholder="votre@email.com" required />
-          </div>
-          <div class="form-group">
-            <label for="password">Mot de passe</label>
-            <input type="password" id="password" placeholder="••••••••" required />
-          </div>
-          <div class="form-group">
-            <label for="confirm-password">Confirmez le mot de passe</label>
-            <input type="password" id="confirm-password" placeholder="••••••••" required />
-          </div>
-          <div class="form-options">
-            <label class="checkbox">
-              <input type="checkbox" required />
-              J'accepte les <a href="cgu.html">Conditions Générales d'Utilisation</a>
-            </label>
-          </div>
-          <button type="submit" class="btn-primary">Créer mon compte</button>
-        </form>
-        <div class="signup-link">
-          Déjà inscrit ? <a href="login.html">Connectez-vous</a>
+      <h1>Nos tarifs pour les entreprises</h1>
+      <p>Des solutions simples, transparentes et adaptées à vos besoins de recrutement au Cameroun.</p>
+    </div>
+  </section>
+
+  <!-- Offre Promo -->
+  <div class="container">
+    <div class="promo-banner">
+      <h2>🔥 Offre de lancement !</h2>
+      <p>Publiez votre première offre gratuitement pendant 14 jours.</p>
+      <div class="promo-price">0 FCFA</div>
+      <p>Valable jusqu’au 31 décembre 2025</p>
+      <button class="btn btn-primary" style="margin-top: 16px;" onclick="window.location.href='publish-offer.html'">Profiter de l’offre</button>
+      <p id="countdown-text">Offre valable encore <strong id="days-left">42</strong> jours</p>
+    </div>
+
+    </div>
+
+    <div class="highlight">
+      💡 <strong>Conseil :</strong> Même après l’offre gratuite, nos tarifs restent parmi les plus compétitifs du marché camerounais.
+    </div>
+  </div>
+
+  <!-- Formules Simples -->
+  <section class="pricing-section">
+    <div class="container">
+      <h2 class="section-title">Formules à l’unité</h2>
+      <p class="section-subtitle">Idéal pour les recrutements ponctuels</p>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h3>Publication Standard</h3>
+          <div class="card-price">50 000 FCFA</div>
+          <div class="card-duration">Valable 30 jours</div>
+          <ul>
+            <li>Publication sur la plateforme</li>
+            <li>Visibilité dans les résultats de recherche</li>
+            <li>Recevoir les candidatures par email</li>
+          </ul>
+          <button class="btn btn-outline" onclick="window.location.href='publish-offer.html'">Publier une offre</button>
+        </div>
+
+        <div class="pricing-card">
+          <h3>Offre Premium</h3>
+          <div class="card-price">100 000 FCFA</div>
+          <div class="card-duration">Valable 30 jours</div>
+          <ul>
+            <li>Tout inclus dans Standard</li>
+            <li>Mise en avant en haut des résultats</li>
+            <li>Bannière visuelle sur la fiche</li>
+            <li>Statistiques de vue et candidatures</li>
+          </ul>
+          <button class="btn btn-primary" onclick="window.location.href='publish-offer.html'">Choisir Premium</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Packages Entreprises -->
+  <section class="pricing-section" style="background: var(--bg-light);">
+    <div class="container">
+      <h2 class="section-title">Packages Entreprises</h2>
+      <p class="section-subtitle">Pour les recruteurs réguliers et les PME en croissance</p>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h3>Starter</h3>
+          <div class="card-price">180 000 FCFA</div>
+          <div class="card-duration">60 jours – 3 offres</div>
+          <ul>
+            <li>3 publications Premium</li>
+            <li>Accès à la base de CV</li>
+            <li>Support prioritaire</li>
+          </ul>
+          <button class="btn btn-outline" onclick="window.location.href='mailto:contact@irelisgroup.com'">Demander plus</button>
+        </div>
+
+        <div class="pricing-card">
+          <h3>Business</h3>
+          <div class="card-price">400 000 FCFA</div>
+          <div class="card-duration">90 jours – 8 offres</div>
+          <ul>
+            <li>8 publications Premium</li>
+            <li>Accès complet à la base de CV</li>
+            <li>Tableau de bord recruteur</li>
+            <li>Assistance RH mensuelle</li>
+          </ul>
+          <button class="btn btn-primary" onclick="window.location.href='mailto:contact@irelisgroup.com'">Contacter notre équipe</button>
         </div>
       </div>
     </div>
@@ -128,6 +185,19 @@
       </div>
     </div>
   </footer>
+  <script>
+    // Compteur : du 1er novembre 2025 au 31 décembre 2025
+    const promoEnd = new Date('2025-12-31T23:59:59');
+    const today = new Date();
+    const diffTime = promoEnd - today;
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+    if (diffDays > 0) {
+      document.getElementById('days-left').textContent = diffDays;
+    } else {
+      document.getElementById('countdown-text').innerHTML = '<strong style="color:#ef4444">Offre expirée</strong>';
+    }
+  </script>
 
   <script src="script.js"></script>
 </body>

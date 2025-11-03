@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Inscription | Irelis</title>
+  <title>Accompagnement | Irelis</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -37,40 +37,41 @@
     </div>
   </header>
 
-  <!-- Register Form -->
-  <section class="login-section">
+  <!-- Hero -->
+  <section class="hero">
     <div class="container">
-      <div class="login-box">
-        <h2>Créez votre compte gratuitement</h2>
-        <form class="login-form">
-          <div class="form-group">
-            <label for="name">Nom complet</label>
-            <input type="text" id="name" placeholder="Jean Dupont" required />
-          </div>
-          <div class="form-group">
-            <label for="email">Adresse email</label>
-            <input type="email" id="email" placeholder="votre@email.com" required />
-          </div>
-          <div class="form-group">
-            <label for="password">Mot de passe</label>
-            <input type="password" id="password" placeholder="••••••••" required />
-          </div>
-          <div class="form-group">
-            <label for="confirm-password">Confirmez le mot de passe</label>
-            <input type="password" id="confirm-password" placeholder="••••••••" required />
-          </div>
-          <div class="form-options">
-            <label class="checkbox">
-              <input type="checkbox" required />
-              J'accepte les <a href="cgu.html">Conditions Générales d'Utilisation</a>
-            </label>
-          </div>
-          <button type="submit" class="btn-primary">Créer mon compte</button>
-        </form>
-        <div class="signup-link">
-          Déjà inscrit ? <a href="login.html">Connectez-vous</a>
+      <h1>Accompagnement personnalisé pour votre carrière</h1>
+      <p>Que vous soyez en recherche d’emploi, en reconversion, ou en quête de progression, nous vous accompagnons à chaque étape.</p>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="services-section">
+    <div class="container">
+      <h2>Nos services d’accompagnement</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Coaching carrière</h3>
+          <p>Un coach dédié pour définir votre projet professionnel, identifier vos forces et vous guider vers le poste idéal.</p>
+        </div>
+        <div class="service-card">
+          <h3>Rédaction de CV et lettre de motivation</h3>
+          <p>Optimisez votre CV et votre lettre de motivation pour maximiser vos chances d’être sélectionné.</p>
+        </div>
+        <div class="service-card">
+          <h3>Préparation aux entretiens</h3>
+          <p>Simulations d’entretien, feedback personnalisé, et conseils pour réussir chaque étape du processus de recrutement.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Prêt à booster votre carrière ?</h2>
+      <p>Notre équipe d’experts est là pour vous aider à atteindre vos objectifs professionnels.</p>
+      <button class="btn-primary" onclick="alert('Contactez-nous pour un entretien gratuit !')">Réserver un entretien gratuit</button>
     </div>
   </section>
 
